@@ -1,0 +1,26 @@
+{
+  "name": "mage2/module-installer",
+  "type": "composer-plugin",
+  "description": "A composer plugin, to help install modules for mage2 e commerce applications.",
+  "license": "MIT",
+  "keywords": ["composer", "composer-plugin", "composer-installer","mage2-modules"],
+  "authors": [
+    {
+      "name": "Purvesh Patel",
+      "email": "ind.purvesh@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3",
+    "composer-plugin-api": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {"Mage2\\Composer\\": "src/Composer/"}
+  },
+  "extra": {
+      "class": ["Mage2\\Composer\\Mage2Module"],
+      "branch-alias": {
+        "dev-master": "1.0.x-dev"
+       }
+  }
+}
