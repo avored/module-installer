@@ -15,7 +15,7 @@
     "composer-plugin-api" : "^1.0"
   },
   "autoload": {
-    "psr-0": {"Mage2\\Composer\\": "src/"}
+    "psr-4": {"Mage2\\Composer\\": "src/"}
   },
   "extra": {
       "class": ["Mage2\\Composer\\Mage2Module"],
