@@ -15,7 +15,7 @@
     "composer/installer" : "^1.3.0"
   },
   "autoload": {
-    "psr-4": {"Mage2\\Composer\\": "src/Composer/"}
+    "psr-4": {"Mage2\\Composer\\": "src/"}
   },
   "extra": {
       "class": ["Mage2\\Composer\\Mage2Module"],
