@@ -33,7 +33,7 @@ class ModuleInstaller extends LibraryInstaller
         } else {
             list($vendor, $package) = explode('/', $names);
 
-            return 'modules/' . $vendor . $package;
+            return 'modules/' . $package;
         }
     }
 
