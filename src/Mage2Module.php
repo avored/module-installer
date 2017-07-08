@@ -1,14 +1,4 @@
 <?php
-/*
- * WellCommerce Open-Source E-Commerce Platform
- * 
- * This file is part of the WellCommerce package.
- *
- * (c) Adam Piotrowski <adam@wellcommerce.org>
- * 
- * For the full copyright and license information,
- * please view the LICENSE file that was distributed with this source code.
- */
 
 namespace Mage2\Composer;
 
@@ -29,8 +19,8 @@ class Mage2Module implements PluginInterface
         $pluginInstaller = new ModuleInstaller($io, $composer);
         $composer->getInstallationManager()->addInstaller($pluginInstaller);
 
-        $themeInstaller = new ThemeInstaller($io, $composer);
-        $composer->getInstallationManager()->addInstaller($themeInstaller);
+        //$themeInstaller = new ThemeInstaller($io, $composer);
+        //$composer->getInstallationManager()->addInstaller($themeInstaller);
     }
 
 } 

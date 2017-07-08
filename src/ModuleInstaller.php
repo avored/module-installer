@@ -21,7 +21,7 @@ use Composer\Package\PackageInterface;
 class ModuleInstaller extends LibraryInstaller
 {
 
-    public function getPackageBasePath(PackageInterface $package)
+    public function getInstallPath(PackageInterface $package)
     {
         $names = $package->getNames();
         if(is_array($names)) {
@@ -33,7 +33,7 @@ class ModuleInstaller extends LibraryInstaller
         } else {
             list($vendor, $package) = explode('/', $names);
 
-            return 'modules/' . $package;
+            return 'modules/' . $vendor. "/" .$package;
         }
     }
 
