@@ -11,7 +11,7 @@
     }
   ],
   "require": {
-    "composer/installer" : "^1.3.0"
+    "composer/installers" : "^1.3.0"
   },
   "autoload": {
     "psr-0": {"Mage2\\Composer\\": "src/"}
