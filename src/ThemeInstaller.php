@@ -16,7 +16,7 @@ class ThemeInstaller extends LibraryInstaller
     {
         list($vendor, $package) = explode('/', $package->getPrettyName());
 
-        return 'themes/' . $package;
+        return 'themes/' . $vendor. "/" .$package;
     }
 
     public function supports($packageType)

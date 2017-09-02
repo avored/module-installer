@@ -19,8 +19,8 @@ class Mage2Module implements PluginInterface
         $pluginInstaller = new ModuleInstaller($io, $composer);
         $composer->getInstallationManager()->addInstaller($pluginInstaller);
 
-        //$themeInstaller = new ThemeInstaller($io, $composer);
-        //$composer->getInstallationManager()->addInstaller($themeInstaller);
+        $themeInstaller = new ThemeInstaller($io, $composer);
+        $composer->getInstallationManager()->addInstaller($themeInstaller);
     }
 
 } 
