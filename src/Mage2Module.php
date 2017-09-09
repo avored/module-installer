@@ -16,8 +16,8 @@ class Mage2Module implements PluginInterface
     public function activate(Composer $composer, IOInterface $io)
     {
       
-        $pluginInstaller = new ModuleInstaller($io, $composer);
-        $composer->getInstallationManager()->addInstaller($pluginInstaller);
+        $moduleInstaller = new ModuleInstaller($io, $composer);
+        $composer->getInstallationManager()->addInstaller($moduleInstaller );
 
         $themeInstaller = new ThemeInstaller($io, $composer);
         $composer->getInstallationManager()->addInstaller($themeInstaller);

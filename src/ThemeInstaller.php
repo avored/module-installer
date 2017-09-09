@@ -31,6 +31,6 @@ class ThemeInstaller extends LibraryInstaller
 
     public function supports($packageType)
     {
-        return 'mage2-theme' === $packageType;
+        return 'mage2-theme' == $packageType;
     }
 } 
