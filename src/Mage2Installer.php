@@ -18,27 +18,34 @@ use Composer\Package\PackageInterface;
  * Class PluginInstaller
  *
  */
-class ModuleInstaller extends LibraryInstaller
+class Mage2Installer extends LibraryInstaller
 {
+    public $packages = ["mage2-module", "mage2-theme"];
 
     public function getInstallPath(PackageInterface $package)
     {
+        $type = $package->getType();
         $names = $package->getNames();
-        if(is_array($names)) {
+        if (is_array($names)) {
             $names = $names[0];
         }
-        $extra = $package->getExtra();
-        if (isset($extra['install-dir'])) {
-            return $extra['install-dir'];
-        } else {
-            list($vendor, $package) = explode('/', $names);
 
-            return 'modules/' . $vendor. "/" .$package;
+        if("mage2-module" == $type) {
+            list($vendor, $package) = explode("/", $names);
+
+            return "modules/" . $vendor . "/" . $package;
         }
+
+        if("mage2-theme" == $type) {
+            list($vendor, $package) = explode("/", $names);
+
+            return "themes/" . $vendor . "/" . $package;
+        }
+
     }
 
     public function supports($packageType)
     {
-        return 'mage2-module' === $packageType;
+        return in_array($packageType, $this->packages);
     }
 } 
