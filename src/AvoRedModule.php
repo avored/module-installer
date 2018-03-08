@@ -15,7 +15,7 @@ class AvoRedModule implements PluginInterface
 {
     public function activate(Composer $composer, IOInterface $io)
     {
-        $avoredInstaller = new AVoRedInstaller($io, $composer);
+        $avoredInstaller = new AvoRedInstaller($io, $composer);
         $composer->getInstallationManager()->addInstaller($avoredInstaller);
 
     }
