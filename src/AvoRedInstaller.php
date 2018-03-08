@@ -9,7 +9,7 @@
  * For the full copyright and license information,
  * please view the LICENSE file that was distributed with this source code.
  */
-namespace Mage2\Composer;
+namespace AvoRed\Composer;
 
 use Composer\Installer\LibraryInstaller;
 use Composer\Package\PackageInterface;
@@ -18,9 +18,9 @@ use Composer\Package\PackageInterface;
  * Class PluginInstaller
  *
  */
-class Mage2Installer extends LibraryInstaller
+class AvoRedInstaller extends LibraryInstaller
 {
-    public $packages = ["mage2-module", "mage2-theme"];
+    public $packages = ["avored-module", "avored-theme"];
 
     public function getInstallPath(PackageInterface $package)
     {
@@ -30,13 +30,13 @@ class Mage2Installer extends LibraryInstaller
             $names = $names[0];
         }
 
-        if("mage2-module" == $type) {
+        if("avored-module" == $type) {
             list($vendor, $package) = explode("/", $names);
 
             return "modules/" . $vendor . "/" . $package;
         }
 
-        if("mage2-theme" == $type) {
+        if("avored-theme" == $type) {
             list($vendor, $package) = explode("/", $names);
 
             return "themes/" . $vendor . "/" . $package;

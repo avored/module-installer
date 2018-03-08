@@ -1,2 +1,2 @@
 # module-installer
-Mage2 Module Installer
+AvoRed Module Installer

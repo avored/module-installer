@@ -1,9 +1,9 @@
 {
   "name": "avored/module-installer",
   "type": "composer-plugin",
-  "description": "A composer plugin, to help install modules for mage2 e commerce applications.",
+  "description": "A composer plugin, to help install modules for AvoREd e commerce applications.",
   "license": "MIT",
-  "keywords": ["composer", "composer-plugin", "composer-installer","mage2-modules"],
+  "keywords": ["composer", "composer-plugin", "composer-installer","avored-modules"],
   "authors": [
     {
       "name": "Purvesh Patel",
@@ -15,10 +15,10 @@
     "composer-plugin-api" : "^1.0"
   },
   "autoload": {
-    "psr-4": {"Mage2\\Composer\\": "src/"}
+    "psr-4": {"AvoRed\\Composer\\": "src/"}
   },
   "extra": {
-      "class": ["Mage2\\Composer\\Mage2Module"],
+      "class": ["AvoRed\\Composer\\AvoRedModule"],
       "branch-alias": {
         "dev-master": "1.0.x-dev"
        }
