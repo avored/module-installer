@@ -20,4 +20,10 @@ class AvoRedModule implements PluginInterface
 
     }
 
+    public function deactivate(Composer $composer, IOInterface $io)
+    {
+        //@todo implement this method
+
+    }
+
 } 
